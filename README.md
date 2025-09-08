@@ -1,7 +1,7 @@
 Student Management System
 
-<> A web-based Student Management System built with ASP.NET Core MVC and Entity Framework Core.
-<> The system allows managing students, teachers, and courses with full CRUD operations.
+. A web-based Student Management System built with ASP.NET Core MVC and Entity Framework Core.
+. The system allows managing students, teachers, and courses with full CRUD operations.
 ==================================================================================
 Features :
 <> Student Management – Add, edit, view, and delete student records.
