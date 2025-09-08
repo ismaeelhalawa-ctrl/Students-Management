@@ -1,0 +1,59 @@
+﻿@model IEnumerable<StudentsManagement.Models.Course>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Courses Information</h1>
+
+<p>
+    <a type="button" class="btn btn-secondary" fdprocessedid="0epeqn" asp-action="Create">Add New Course</a>
+</p>
+<table class="table table-hover">
+    <thead>
+        <tr class="table-primary">
+            <th>
+                @Html.DisplayNameFor(model => model.Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Hours)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.teacher)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.student)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr class="table-dark">
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Hours)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.teacher.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.student.Name)
+            </td>
+            <td>
+                    <a type="button" class="btn btn-secondary" fdprocessedid="0epeqn" asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a type="button" class="btn btn-success" fdprocessedid="5wj2ze" asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                    <a type="button" class="btn btn-warning" fdprocessedid="095pk" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,37 @@
+﻿@model StudentsManagement.Models.Teacher
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete Teacher Information</h1>
+
+<div>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Subject)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Subject)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Delete Teacher" class="btn btn-warning" fdprocessedid="095pk" /> |
+        <a type="button" class="btn btn-secondary" fdprocessedid="0epeqn" asp-action="Index">Back to List</a>
+    </form>
+</div>

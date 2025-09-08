@@ -1,0 +1,35 @@
+﻿@model StudentsManagement.Models.Teacher
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Detailed information</h1>
+
+<div>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Subject)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Subject)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a type="button" class="btn btn-secondary" fdprocessedid="0epeqn" asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
+    <a type="button" class="btn btn-secondary" fdprocessedid="0epeqn" asp-action="Index">Back to List</a>
+</div>

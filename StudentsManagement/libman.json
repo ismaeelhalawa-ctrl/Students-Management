@@ -1,0 +1,14 @@
+{
+  "version": "3.0",
+  "defaultProvider": "cdnjs",
+  "libraries": [
+    {
+      "library": "bootswatch@5.3.7",
+      "destination": "wwwroot/bootswatch/",
+      "files": [
+        "solar/bootstrap.css",
+        "solar/bootstrap.min.css"
+      ]
+    }
+  ]
+}
