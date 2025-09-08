@@ -5,6 +5,7 @@ Student Management System
 <> The system allows managing students, teachers, and courses with full CRUD operations.
 
 ==================================================================================
+
 Features :
 
 <> Student Management – Add, edit, view, and delete student records.
@@ -22,6 +23,7 @@ Features :
 <> Responsive UI – Clean design with Bootswatch theme.
 
 ==================================================================================
+
 Technologies Used :
 1. ASP.NET Core MVC
 2. Entity Framework Core (Code First)
