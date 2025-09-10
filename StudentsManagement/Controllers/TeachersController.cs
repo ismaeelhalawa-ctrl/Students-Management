@@ -136,7 +136,6 @@ namespace StudentsManagement.Controllers
             return View(teacher);
         }
 
-        // POST: Teachers/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
