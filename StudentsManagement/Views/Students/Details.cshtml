@@ -37,6 +37,9 @@
     </dl>
 </div>
 <div>
-    <a type="button" class="btn btn-secondary" fdprocessedid="0epeqn" asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
+    @if (User.IsInRole("Admin"))
+    {
+        <a type="button" class="btn btn-secondary" fdprocessedid="0epeqn" asp-action="Edit" asp-route-id="@Model?.Id">Edit</a>
+    }
     <a type="button" class="btn btn-secondary" fdprocessedid="0epeqn" asp-action="Index">Back to List</a>
 </div>

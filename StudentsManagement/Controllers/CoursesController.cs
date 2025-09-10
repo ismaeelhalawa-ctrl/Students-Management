@@ -11,6 +11,7 @@ using StudentsManagement.Models;
 
 namespace StudentsManagement.Controllers
 {
+    [Authorize]
     [Authorize(Roles = "Admin")]
     public class CoursesController : Controller
     {

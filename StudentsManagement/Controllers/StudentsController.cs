@@ -11,6 +11,7 @@ using StudentsManagement.Models;
 
 namespace StudentsManagement.Controllers
 {
+    [Authorize]
     public class StudentsController : Controller
     {
         private readonly ApplicationDbContext _context;

@@ -6,10 +6,14 @@
 
 <h1>Student Information</h1>
 
-<p>
-    
-    <a type="button" class="btn btn-secondary" fdprocessedid="0epeqn" asp-action="Create">Add New Student</a>
-</p>
+
+@if (User.IsInRole("Admin"))
+{
+    <p>
+        <a type="button" class="btn btn-secondary" fdprocessedid="0epeqn" asp-action="Create">Add New Student</a>
+    </p>
+}
+
 <table class="table table-hover">
     <thead>
         <tr class="table-primary">
@@ -43,11 +47,15 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Grade)
             </td>
-            <td>
-                    <a type="button" class="btn btn-secondary" fdprocessedid="0epeqn" asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                    <a type="button" class="btn btn-success" fdprocessedid="5wj2ze" asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                    <a type="button" class="btn btn-warning" fdprocessedid="095pk" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
+                <td>
+                    <a type="button" class="btn btn-success" fdprocessedid="5wj2ze" asp-action="Details" asp-route-id="@item.Id">Details</a>
+
+                    @if (User.IsInRole("Admin"))
+                    {
+                        <a type="button" class="btn btn-secondary" fdprocessedid="0epeqn" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+                        <a type="button" class="btn btn-warning" fdprocessedid="095pk" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                    }
+                </td>
         </tr>
 }
     </tbody>
